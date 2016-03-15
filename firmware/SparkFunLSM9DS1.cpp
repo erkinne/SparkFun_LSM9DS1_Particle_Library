@@ -50,7 +50,7 @@ void LSM9DS1::init(interface_mode interface, uint8_t xgAddr, uint8_t mAddr)
 	settings.gyro.enableY = true;
 	settings.gyro.enableZ = true;
 	// gyro scale can be 245, 500, or 2000
-	settings.gyro.scale = 500;
+	settings.gyro.scale = 2000;
 	// gyro sample rate: value between 1-6
 	// 1 = 14.9    4 = 238
 	// 2 = 59.5    5 = 476
@@ -77,7 +77,7 @@ void LSM9DS1::init(interface_mode interface, uint8_t xgAddr, uint8_t mAddr)
 	settings.accel.enableY = true;
 	settings.accel.enableZ = true;
 	// accel scale can be 2, 4, 8, or 16
-	settings.accel.scale = 4;
+	settings.accel.scale = 8;
 	// accel sample rate can be 1-6
 	// 1 = 10 Hz    4 = 238 Hz
 	// 2 = 50 Hz    5 = 476 Hz
@@ -88,7 +88,7 @@ void LSM9DS1::init(interface_mode interface, uint8_t xgAddr, uint8_t mAddr)
 	// 0 = 408 Hz   2 = 105 Hz
 	// 1 = 211 Hz   3 = 50 Hz
 	settings.accel.bandwidth = 3;
-	settings.accel.highResEnable = false;
+	settings.accel.highResEnable = true;
 	// accelHighResBandwidth can be any value between 0-3
 	// LP cutoff is set to a factor of sample rate
 	// 0 = ODR/50    2 = ODR/9
